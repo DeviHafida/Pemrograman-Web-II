@@ -1,0 +1,331 @@
+/* === GLOBAL === */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, rgb(239, 237, 232),rgb(133, 153, 253), #fbc2eb, #a18cd1);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+    margin: 0;
+    padding: 100px 20px 20px 20px; /* padding atas ditambah agar konten tidak tertutup */
+    color: #2d3436;
+}
+
+/* Animasi gradasi */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2, h3 {
+    color: #6a0572;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+/* === HEADING === */
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2d3436;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+/* === ARTIKEL CONTAINER === */
+.artikel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* === ARTIKEL CARD === */
+.artikel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.artikel-item {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.artikel-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.artikel-content {
+    flex: 1;
+}
+
+/* === GAMBAR === */
+.artikel-item img {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* === TEKS === */
+.artikel-item h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #6c3483;
+}
+
+.artikel-item p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #555;
+    max-width: 650px;
+}
+
+.artikel-item small {
+    font-size: 12px;
+    color: #999;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .artikel-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .artikel-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* === NAVIGATION BAR === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo atau kiri */
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #6c3483;
+}
+
+/* Navigasi utama */
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #2d3436;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.navbar .menu a:hover {
+    background-color: #fceff9;
+    color: #c44569;
+}
+
+/* Tombol login dan register */
+.navbar .auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .auth-buttons a {
+    background: linear-gradient(to right, rgb(239, 237, 232),rgb(133, 153, 253));
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .auth-buttons a:hover {
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    color: #2d3436;
+}
+
+/* === Artikel Container === */
+.article-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* === Gambar Artikel === */
+.article-card img {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #fff0f5;
+}
+
+/* === Judul Artikel === */
+.article-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #8e44ad;
+    font-weight: 700;
+    font-family: serif;
+}
+
+/* === Ringkasan Artikel === */
+.article-card p {
+    margin: 10px 0;
+    color: #34495e;
+    line-height: 1.6;
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* === Tanggal Artikel === */
+.article-card small {
+    display: block;
+    margin-top: 6px;
+    color: #888;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.footer {
+    background: linear-gradient(to right, rgb(239, 237, 232),rgb(133, 153, 253));
+    padding: 30px 20px;
+    margin-top: 40px;
+    color: #333;
+    font-family: serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #6a0572;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #4a148c;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #d81b60;
+}
+
+.footer-logo img {
+    border-radius: 8px;
+}
